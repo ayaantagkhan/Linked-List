@@ -1,44 +1,58 @@
 from linkelist import Node, LinkedList
+from mergelinkedlist import mergeTwoLinkedLists
+from reversal import Reversal
 
-ll = LinkedList()
+def testMerge():
+    list1 = LinkedList()
+    list2 = LinkedList()
 
-ll.push_back(10)
-ll.push_back(20)
-ll.push_back(30)
+    list1.push_back(1)
+    list1.push_back(2)
+    list1.push_back(3)
 
 
-# Removes the element at the head (first index) of the linked list 
-# removed = ll.pop_front()
-# print(removed, "was removed from the linked list.")
+    list2.push_back(2)
+    list2.push_back(3)
+    list2.push_back(4)
 
-# Removes an element from the end of the LL
-# print("Removed:", ll.pop_back())
 
-# Adds a new element to the front of the LL
-# print(ll.push_front(5))
+    merged = mergeTwoLinkedLists(list1.head, list2.head)
+    print("New Linked List head:", merged.data)
 
-# Adds a new element to the back of the LL
-# ll.push_back(40)
+def testReversal():
 
-# Inserts a new element at whichever index you choose (index, value of node)
-# print("Inserted:", ll.insert(1,15))
+    list1 = LinkedList()
+    list1.push_back(1)
+    list1.push_back(2)
+    list1.push_back(3)
 
-# Erases an element from an index from the linked list
-# print("Removed:", ll.erase(2))
+    current = list1.head
+    while current:
+        print("Node Value:", current.data)
+        current = current.next
 
-# Get's the n'th value from the end 
-# print(ll.value_n_from_end(2))
 
-# Reverses the linked list 
-# ll.reversal()
+def miscTestPrinter():
 
-current = ll.head
-while current:
-    print("Value:", current.data)
-    current = current.next
+    ll = LinkedList()
 
-print("Linked List Size:", ll.size())
-print("Is the Linked List Empty?:", ll.empty())
-print("Linked List value at Index 1 (starts at index 0):", ll.value_at(1))
-print("The head of the linked list is", ll.front())
-print("The back of the linked list is", ll.back())
+    ll.push_back(10)
+    ll.push_back(20)
+    ll.push_back(30)
+    
+    current = ll.head
+    while current:
+        print("Value:", current.data)
+        current = current.next
+
+    print("Linked List Size:", ll.size())
+    print("Is the Linked List Empty?:", ll.empty())
+    print("Linked List value at Index 1 (starts at index 0):", ll.value_at(1))
+    print("The head of the linked list is", ll.front())
+    print("The back of the linked list is", ll.back())
+
+
+# testMerge()
+# testReversal()
+# miscTestPrinter()
+

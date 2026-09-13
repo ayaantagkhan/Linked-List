@@ -1,0 +1,24 @@
+# Removes the element at the head (first index) of the linked list 
+# removed = ll.pop_front()
+# print(removed, "was removed from the linked list.")
+
+# Removes an element from the end of the LL
+# print("Removed:", ll.pop_back())
+
+# Adds a new element to the front of the LL
+# print(ll.push_front(5))
+
+# Adds a new element to the back of the LL
+# ll.push_back(40)
+
+# Inserts a new element at whichever index you choose (index, value of node)
+# print("Inserted:", ll.insert(1,15))
+
+# Erases an element from an index from the linked list
+# print("Removed:", ll.erase(2))
+
+# Get's the n'th value from the end 
+# print(ll.value_n_from_end(2))
+
+# Reverses the linked list 
+# ll.reversal()

@@ -1,8 +1,10 @@
 from linkelist import Node, LinkedList
 
-def Reversal(self):
+# Reverse a Linked List Problem
+
+def Reversal(LinkedList):
     previous = None
-    current = self.head
+    current = LinkedList.head
 
     while current:
         next_node = current.next
@@ -10,6 +12,6 @@ def Reversal(self):
         previous = current 
         current = next_node 
 
-        self.head = previous 
+        LinkedList.head = previous 
 
             
