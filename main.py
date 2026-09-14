@@ -19,6 +19,10 @@ def testMerge():
     merged = mergeTwoLinkedLists(list1.head, list2.head)
     print("New Linked List head:", merged.data)
 
+    while merged:
+        print("Current Node: ", merged.data)
+        merged = merged.next
+
 def testReversal():
 
     list1 = LinkedList()
@@ -52,7 +56,7 @@ def miscTestPrinter():
     print("The back of the linked list is", ll.back())
 
 
-# testMerge()
+testMerge()
 # testReversal()
 # miscTestPrinter()
 
